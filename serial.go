@@ -103,7 +103,7 @@ func posixTimeoutValues(readTimeout time.Duration) (vmin uint8, vtime uint8) {
 	var readTimeoutInDeci int64
 	if readTimeout > 0 {
 		// EOF on zero read
-		minBytesToRead = 0
+		minBytesToRead = 64
 		// convert timeout to deciseconds as expected by VTIME
 		readTimeoutInDeci = (readTimeout.Nanoseconds() / 1e6 / 100)
 		// capping the timeout

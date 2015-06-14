@@ -12,7 +12,7 @@ an added bonus, the windows package does not use cgo, so you can cross
 compile for windows from another platform.
 
 You can cross compile with
-   GOOS=windows GOARCH=386 go install github.com/tarm/serial
+   GOOS=windows GOARCH=386 go install github.com/MarinX/serial
 
 Currently there is very little in the way of configurability.  You can
 set the baud rate.  Then you can Read(), Write(), or Close() the
@@ -35,7 +35,7 @@ package main
 import (
         "log"
 
-        "github.com/tarm/serial"
+        "github.com/MarinX/serial"
 )
 
 func main() {
